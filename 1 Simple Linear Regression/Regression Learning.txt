@@ -1,0 +1,150 @@
+Q1. What is a learning of a machine?
+A1. A machine is said to be learning from past Experiences(data feed in) with respect to some class of Tasks, if it’s Performance in a given Task improves with the Experience.
+
+Q2. Types of Machine Learning?
+A2. They are of 4 types:- 
+a. Supervised
+b. Unsupervised
+c. Semi-Supervised
+d. Reinforcement
+
+Q3. What is Supervised learning?
+A3. Supervised learning is when the model is getting trained on a labelled dataset. Labelled dataset is one which have both input and output parameters. In this type of learning both training and validation datasets are labelled.
+
+Q4. Types of Supervised learning?
+A4. They are o 2 types:-
+a. Regression
+b. Classification
+
+Q5. What is Regression?
+A5. Regression analysis is a form of predictive modelling technique which investigates the relationship between a dependent (target) and independent variable (predictor). This technique is used for forecasting, time series modelling and finding the causal effect relationship between the variables. 
+For example, relationship between rash driving and number of road accidents by a driver is best studied through regression.
+
+Q6. Why do we use Regression Analysis?
+A6. There are multiple benefits of using regression analysis. They are as follows:
+
+a. It indicates the significant relationships between dependent variable and independent variable.
+b. It indicates the strength of impact of multiple independent variables on a dependent variable.
+
+
+Q7. What is Linear Regression?
+A7. It is one of the most widely known modeling technique. In this technique, the dependent variable is continuous, independent variable(s) can be continuous or discrete, and nature of regression line is linear.
+Linear Regression establishes a relationship between dependent variable (Y) and one or more independent variables (X) using a best fit straight line (also known as regression line).
+It is represented by an equation Y=a+b*X + e, where a is intercept, b is slope of the line and e is error term. This equation can be used to predict the value of target variable based on given predictor variable(s).
+
+Q8. How to obtain best fit line (Value of a and b)?
+A8. This task can be easily accomplished by Least Square Method. It is the most common method used for fitting a regression line. It calculates the best-fit line for the observed data by minimizing the sum of the squares of the vertical deviations from each data point to the line. Because the deviations are first squared, when added, there is no cancelling out between positive and negative values.
+We can evaluate the model performance using the metric R-square.
+
+Q9. What is Least Square?
+A9. Since, we want the line that will give us the smallest sum of squares, this method for finding the best values fro "a" and "b" is called "Least Square".
+				                                   Or
+The least square method is a technique commonly used in regression analysis. It is a mathematical method used to find the best fit line that represents the realtionship between an independent and dependent variable in such a way that the error is minimized.
+a. We want to minimize the square of the distance between the observed values and the line.
+b. We do this by taking the derivative and finding where it is equal to 0.
+
+Q10. What is Gradient Descent? (It takes large steps when the best line is very distant and baby steps when the line is close to it.)(It helps to find best fit line in very less iteration's.)
+A10. Gradient Descent is an optimization algorithm used for minimizing the cost function in various machine learning algorithms. It is basically used for updating the parameters of the learning model.
+                                                               Or
+Gradient provides that steepest direction. In Machine Learning, we are basically trying to reach an optimal solution (bottom of the bowl). Gradient is simply a vector which gives the direction of maximum rate of change.
+
+Why learning rate is set to be low in GD, because if the learning rate will be high and the tangent will be high then we won't get the optimal result.So, beacuse of that we keep learning rate as low.
+let a equation be, y = x^2.
+So, x(new) = x - LR * (dy/dx)   
+
+Loss function :- It decides that in which direction we have to move or in which direction we will have to change the solution.
+Why we use Loss funtion and GD :- 
+a. Exact methods are computationally very Expensive.
+b. Loss function gives the direction of optimal solution.
+c. Fast enough to scale on big data.
+d. Easy to understand.
+Note:- The main reason why gradient descent is used for linear regression is the computational complexity: it's computationally cheaper (faster) to find the solution using the gradient descent in some cases.
+
+Types of gradient Descent :-
+
+a. Batch Gradient Descent :- In this process all the training examples are taken at the same time for a single iteration of gradient descent. But if the number of training examples is large, then batch gradient descent is computationally very expensive. Hence if the number of training examples is large, then batch gradient descent is not preferred. Instead, we prefer to use stochastic gradient descent or mini-batch gradient descent.
+
+b. Stochastic Gradient Descent :- This is a type of gradient descent which processes 1 training example per iteration. Hence, the parameters are being updated even after one iteration in which only a single example has been processed. Hence this is quite faster than batch gradient descent.
+
+c. Mini Batch gradient descent: This is a type of gradient descent which works faster than both batch gradient descent and stochastic gradient descent. It makes a batch of smaller number of datasets that are made by the user. It works for larger training examples and that too with lesser number of iterations.
+
+Q11. What is a cost function?
+A11. Mean Squared Error(MSE) measures the average squared difference between an observation's actual and predicted values. The output is a single number representing the cost, or score, associated with our current set of weights. Our goal is to minimize MSE to improve the accuracy of our model.
+MSE is also sometimes called the Cost Function.
+                        n 
+--------->  mse = (1/n) ∑ (y[i] - y[predicted])^2
+                        i=1
+
+
+Q12. Confusion Matrix :- A confusion matrix is a table that is often used to describe the performance of a classification model (or “classifier”) on a set of test data for which the true values are known. It allows the visualization of the performance of an algorithm.
+A12. 
+
+a. Positive (P) : Observation is positive.
+b. Negative (N) : Observation is not positive.
+c. True Positive (TP) : Observation is positive, and is predicted to be positive.
+d. False Negative (FN) : Observation is positive, but is predicted negative.
+e. True Negative (TN) : Observation is negative, and is predicted to be negative.
+f. False Positive (FP) : Observation is negative, but is predicted positive.
+
+
+
+                    Predicted
+                        |
+                    ---- ----
+                  No         Yes
+       |-No       TN         FP 
+Actual-
+       |-Yes      FN         TP
+
+
+
+
+                    Predicted
+                        |
+                    ---- ----
+         165      No         Yes
+       |-No     50            10    |  60
+Actual-
+       |-Yes     5            100   |  105
+                ---           ---
+                55            110   
+
+
+
+Accuracy :- It is the ratio of correct predictions to total predictions made.
+accuracy = TP + TN
+         ------------
+         Total Values
+
+Error Rate :-  (1 - Accuracy)
+                    Or
+          ER = FP + FN
+              ------------
+              Total Values
+
+Precision :- It is defined as True postives divided by the total of Prdicted Yes.
+precision =  TP
+          ---------
+           FP + TP
+
+Recall :- It is defined as True postives divided by the total of Actual Yes also known Sensitivity or True Positive Rate(TPR).
+REC =     TP 
+       ---------
+        FN + TP
+
+Specificity :- It is the number of correct negative predictions divided by the total number of negatives. It is also called True Negative
+Rate (TNR). The best specificity is 1.0, whereas the worst is 0.0.
+specificity =  TN
+            ---------
+             TN + FP
+
+High recall, low precision :- This means that most of the positive examples are correctly recognized (low FN) but there are a lot of false positives.
+
+Low recall, high precision :- This shows that we miss a lot of positive examples (high FN) but those we predict as positive are indeed positive (low FP)
+
+F-Measure :- The F measure (F1 score or F score) is a measure of a test's accuracy and is defined as the weighted harmonic mean of the precision and recall of the test.
+
+F-Score = 2*Recall*Precision
+         --------------------
+          Recall + Precision
+          
