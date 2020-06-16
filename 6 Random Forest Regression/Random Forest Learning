@@ -1,0 +1,56 @@
+Q1. What is Ensemble Learning ?
+A1. In statistics and machine learning, ensemble methods use multiple learning algorithms to obtain better predictive performance than could be obtained from any of the constituent learning algorithms alone.
+
+Q2. What are the benefits of ensemble model ?
+A2. Ensemble methods helps improve machine learning results by combining multiple models. Using ensemble methods allows to produce better predictions compared to a single model.
+
+Q3. What is Bagging and Boosting ?
+A3. Bagging is a way to decrease the variance in the prediction by generating additional data for training from dataset using combinations with repetitions to produce multi-sets of the original data. 
+Boosting is an iterative technique which adjusts the weight of an observation based on the last classification. If an observation was classified incorrectly, it tries to increase the weight of this observation. Boosting in general builds strong predictive models.
+
+Q4. What is a Random Forest Regressor ?
+A4. "Random Forest is a classifier that contains a number of decision trees on various subsets of the given dataset and takes the average to improve the predictive accuracy of that dataset." Instead of relying on one decision tree, the random forest takes the prediction from each tree and based on the majority votes of predictions, and it predicts the final output.
+The greater number of trees in the forest leads to higher accuracy and prevents the problem of overfitting.
+
+Q5. What is Random Forest Classifier ?
+A5. "Random Forest is a classifier that contains a number of decision trees on various subsets of the given dataset and takes the average to improve the predictive accuracy of that dataset." Instead of relying on one decision tree, the random forest takes the prediction from each tree and based on the majority votes of predictions, and it predicts the final output.
+The greater number of trees in the forest leads to higher accuracy and prevents the problem of overfitting.
+
+Q6. Why use Random Forest?
+A6. a.It takes less training time as compared to other algorithms.
+    b. It predicts output with high accuracy, even for the large dataset it runs efficiently.
+    c. It can also maintain accuracy when a large proportion of data is missing.
+
+Q7. Assumptions for Random Forest ?
+A7. Since the random forest combines multiple trees to predict the class of the dataset, it is possible that some decision trees may predict the correct output, while others may not. But together, all the trees predict the correct output. Therefore, below are two assumptions for a better Random forest classifier :-
+a. There should be some actual values in the feature variable of the dataset so that the classifier can predict accurate results rather than a guessed result.
+b. The predictions from each tree must have very low correlations.
+
+Q8. Applications of Random Forest :-
+A8. There are mainly four sectors where Random forest mostly used :-
+1. Banking: Banking sector mostly uses this algorithm for the identification of loan risk.
+2. Medicine: With the help of this algorithm, disease trends and risks of the disease can be identified.
+3. Land Use: We can identify the areas of similar land use by this algorithm.
+4. Marketing: Marketing trends can be identified using this algorithm.
+
+Q9. Advantages of Random Forest :-
+A9. 
+1. Random Forest is capable of performing both Classification and Regression tasks.
+2. It is capable of handling large datasets with high dimensionality.
+3. It enhances the accuracy of the model and prevents the overfitting issue.
+
+Q10. Disadvantages of Random Forest :-
+A10. 
+1.Although random forest can be used for both classification and regression tasks, it is not more suitable for Regression tasks.
+
+
+
+
+
+
+
+
+
+
+
+
