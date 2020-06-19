@@ -1,0 +1,55 @@
+Q1. What is Regularization ?
+A1. It is a form of regression, that constrains/ regularizes or shrinks the coefficient estimates towards zero. In other words, this technique discourages learning a more complex or flexible model, so as to avoid the risk of overfitting. A simple relation for linear regression looks like this.
+
+Q2. What is the need of Regularization ?
+A2. It refers to the method of preventing overfitting, by explicitly controlling the model complexity. It leads to smoothening of the regression line and thus prevents overfitting. It does so by penalizing the bent of the regression line that tries to closely match the noisy data points.
+
+Q3. Types of Regularizaton ?
+A3. There are 2 types of Regularizaton, they are :-
+a. Ridge(L2) Regularizaton
+b. Lasso(L1) Regularizaton
+
+Q4. What is Ridge(L2) Regularizaton ?
+A4. Ridge regression adds “squared magnitude” of coefficient as penalty term to the loss function. 
+Ridge Reg. = Loss + α * ||w||^2          (here, α = 0.01,1,2,....,,,  and coefficient-> ||w||^2 = w1^2 + w2^2 + ---- + wn^2 )  
+                     (Penalty)           (Loss = Actual Value - Predicted Value)
+                     
+a. L2 regularization forces the weights to be small but does not make them zero.
+b. L2 is not robust to outliers as square terms blows up the error differences of the outliers and the regularization term tries to fix it by penalizing the weights.
+
+Q5. What is Lasso(L1) Regularization ?
+A5. Lasso Regression (Least Absolute Shrinkage and Selection Operator) adds “absolute value of magnitude” of coefficient as penalty term to the loss function.
+Lasso Reg. = Loss + α * ||w||          (here, α = 0.001,1,5,.....,  and ||w|| = |w1| + |w2| + ---- + |wn| )
+                    (Penalty)
+
+a. In L1 norm we shrink the parameters to zero. When input features have weights closer to zero that leads to sparse L1 norm. In Sparse solution majority of the input features have zero weights and very few features have non zero weights.
+b. L1 regularization does feature selection. It does this by assigning insignificant input features with zero weight and useful features with a non zero weight.
+
+Q6. Why we needed L2 regularization?
+A6. We need L2 Reg. because of Outliers. In the presence of outliers, the linear regression gets the line of best fit diverted from the real trend. This is because it follows the method of least squares and in order to minimize the error, it makes the trend line bent towards the outliers. This makes the prediction less accurate and far from what could be in the absence of outliers. To handle this problem, we needed the method of L2 Regularization or Ridge regression.
+
+Q7. Difference between L1 and L2 regularization ?
+A7. The difference between them are :-
+a. L1 Regularization
+i.) L1 penalizes sum of absolute value of weights.
+ii.) L1 has a sparse solution.
+iii.) L1 has multiple solutions.
+iv.) L1 has built in feature selection.
+v.) L1 is robust to outliers.
+vi.) L1 generates model that are simple and interpretable but cannot learn complex patterns.
+
+b. L2 Regularization
+i.) L2 regularization penalizes sum of square weights.
+ii.) L2 has a non sparse solution.
+iii.) L2 has one solution.
+iv.) L2 has no feature selection.
+v.) L2 is not robust to outliers.
+vi.)L2 gives better prediction when output variable is a function of all input features.
+vii.) L2 regularization is able to learn complex data patterns.
+
+
+
+
+
+
+
