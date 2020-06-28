@@ -1,0 +1,22 @@
+OLS stands for Ordinary Least Squares. OLS is heavily used in econometrics — a branch of economics where statistical methods are used to find the insights in economic data.
+As we know, the simplest linear regression algorithm assumes that the relationship between an independent variable (x) and dependent variable (y) is of the following form: y = mx + c, which is the equation of a line.
+In line with that, OLS is an estimator in which the values of m and c (from the above equation) are chosen in such a way as to minimize the sum of the squares of the differences between the observed dependent variable and predicted dependent variable. That’s why it’s named ordinary least squares.
+Also, it should be noted that when the sum of the squares of the differences is minimum, the loss is also minimum—hence the prediction is better.
+
+Advantages of OLS :- 
+1. OLS is easier to implement compared to other similar econometric techniques. This is because the theory of least squares is easier to understand for a developer than other common approaches.
+2. OLS has a simple mathematical concept so it is easier to explain to non-technologists or stakeholders at high level.
+
+Assumptions of OLS :-
+1. There should be no multicollinearity between any two independent variables.
+2. The value of the mean of the error terms should be zero for given independent variables.
+3. The sample taken for the OLS regression model should be taken randomly from the population.
+4. All the error terms in the regression should have the same variance, which means homoscedasticity.
+
+OLS regression results :-
+1. R-squared is also called the coefficient of determination. It’s a statistical measure of how well the regression line fits the data.
+2. Adjusted R-squared actually adjusts the statistics based on the number of independent variables present.
+3. The ratio of deviation of the estimated value of a parameter from its hypothesized value to its standard error is called t-statistic.
+4. F-statistic is calculated as the ratio of mean squared error of the model and mean squared error of residuals.
+5. AIC stands for Akaike Information Criterion, which estimates the relative quality of statistical models for a given dataset.
+6. BIC stands for Bayesian Information Criterion, which is used as a criterion for model selection among a finite set of models. BIC is like AIC, however it adds a higher penalty for models with more parameters.
