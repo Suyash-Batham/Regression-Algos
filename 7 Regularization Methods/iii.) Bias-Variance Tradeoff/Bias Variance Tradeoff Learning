@@ -1,0 +1,32 @@
+Q1. What is an irreducible Error ?
+A1. Irreducible error is the error that can’t be reduced by creating good models. It is a measure of the amount of noise in our data. Here it is important to understand that no matter how good we make our model, our data will have certain amount of noise or irreducible error that can not be removed.
+
+Q2. What is Bias ?
+A2. Bias is the difference between the average prediction of our model and the correct value which we are trying to predict. Model with high bias pays very little attention to the training data and oversimplifies the model. It always leads to high error on training and test data.
+
+Q3. What is Variance ?
+A3. Variance is the variability of model prediction for a given data point or a value which tells us spread of our data. Model with high variance(means it's trained with lot of noise and irrelevant data) pays a lot of attention to training data and does not generalize on the data which it hasn’t seen before. As a result, such models perform very well on training data but has high error rates on test data.
+
+4. Mathematically we see :- Let the variable we are trying to predict as Y and other covariates as X. We assume there is a relationship between the two such that :-
+                                Y=f(X) + e
+Where e is the error term and it’s normally distributed with a mean of 0.
+
+Q5. How does bias and variance affect your model ?
+A5. https://miro.medium.com/max/936/1*xwtSpR_zg7j7zusa4IDHNQ.png
+a. High Variance & High Bias :- Model will be inconsistent and also inaccurate on average.
+b. Low Variance & High Bias :- Model's are consistent but they're very low on average.(If a model is too simple and  has a very few parameters then model will suffer through this condidtion.)
+c. High Variance & Low Bias :- Model's are some what accurate but inconsistent on average.(If a model has large number of parameters then it will suffer through this condition.)
+d. Low Variance & Low Bias :- Model's are consistent and accurate on average. (This is the condition that we want to acheive in our cases.)
+
+High Variance :- low training error and high validation eror.(Overfitting bcuz it will trained with a lot of noisy data.)
+High Bias :- high training error and validation error same as training error.(Underfiiting)
+
+Q6. What is Total Error ?
+A6. An optimal balance between the bias and variance, in terms of algorithm complexity, will ensure that the model is never overfitted or underfitted at all.
+                    Total Error = Bias^2 + Variance + Irreducible Error.
+An optimal balance of bias and variance would never overfit or underfit the model.
+
+https://miro.medium.com/max/1124/1*RQ6ICt_FBSx6mkAsGVwx8g.png
+
+Q7. What is Bias-Variance Tradeoff ?
+A7. Finding the right balance between the bias and variance of the model is called the Bias-Variance trade-off. It is basically a way to make sure the model is neither overfitted or underfitted in any case. Trade-off is tension between the error introduced by the bias and the variance. Ideally, low bias and low variance is the target for any Machine Learning model.
